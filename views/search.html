@@ -1,0 +1,13 @@
+﻿    <link href="css/app.css" rel="stylesheet" />
+<input id="searchlist" class="searchlist" />
+<script>
+    $("#searchlist").kendoComboBox({
+        dataTextField: "text",
+        dataValueField: "value",
+        dataSource: [
+            { text: "Item1", value: "1" },
+            { text: "Item2", value: "2" }
+        ]
+    });
+
+</script>

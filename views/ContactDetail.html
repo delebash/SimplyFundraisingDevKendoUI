@@ -1,0 +1,92 @@
+<form id="dataform">
+	<ul class="errorMessages"></ul>
+	<span class="required_notification">* Denotes Required Field</span>
+	<h2>Contact Form</h2>
+	<div id="ContactInfo">
+		<fieldset>
+			<legend>
+				Contact Info
+			</legend>
+			<div id="KeyID" data-myeditonly="true">
+				<label for="ID">ID:</label>
+				<input type="text" id="ID" data-bind="value: selectedRecord.__KEY">
+			</div>
+			<p>
+				<label for="firstName">First Name:</label>
+				<input type="text"  id="firstName" name="firstName" data-bind="value: selectedRecord.firstName, events: { change: change }" data-myfriendly="First Name"
+				placeholder="First Name">
+			</p>
+			<p>
+				<label for="middleName">Middle Name:</label>
+				<input type="text" id="middleName" name="middleName" data-bind="value: selectedRecord.middleName, events: { change: change }" data-myfriendly="Middle Name"
+				>
+			</p>
+			<p>
+				<label for="lastName">Last Name:</label>
+				<input type="text" id="lastName" data-bind="value: selectedRecord.lastName, events: { change: change }" data-myfriendly="Last Name"
+				name="lastName">
+			</p>
+			<p>
+				<label for="ContactType">Contact Type:</label>
+				<input type="text" id="ContactType" class="combobox" title="required" data-myfriendly="Contact Type" name="ContactType"
+				data-bind="value: selectedRecord.ContactType.__KEY, events: { change: change }">
+				<span class="" data-for="ContactType"></span>
+			</p>
+
+		</fieldset>
+	</div>
+	<div data-myeditonly="true">
+		<div id="addressdetail">
+
+			<fieldset>
+				<legend>
+					Address info
+				</legend>
+
+				<label for="street">Street Address:</label>
+				<input type="text" id="street" data-bind="value: selectedRecord.street , events: { change: change }" name="street">
+				<input type="button" id="save" name="save" data-bind="click: save, enabled: selected" value="Save">
+				<input type="button" id="add" name="add" data-bind="click: save" value="Add">
+
+				<div id="AddressContactGrid"></div>
+			</fieldset>
+		</div>
+	</div>
+
+	<input type="button" id="parentsave" data-bind="click: save" value="Save" />
+
+</form>
+<script>
+    myBindForm();
+
+    function myBindForm() {
+        var myForm = $("form").attr("id");
+        var isEdit = myFormIsEdit(myForm);
+        var myValidator = setupValidationBlur(myForm);
+
+        //Load Combobox data
+        var contactTypeDS = getDSByName("ContactTypeDS");
+        getDropdownList("ContactType", contactTypeDS);
+
+        //Create parent record empty dataset for add/update
+        var parentDS = getDSByName("ContactDS");
+        var myParentEntity = "Contact";
+        //Note: any changes to myData will change the data for the dataSource that it got its data from
+        var myData;
+        var myParentKey;
+        //Set data for parentDS to DataRows from gridview
+        if (isEdit) {
+            parentDS.data(DataRows);
+            myData = parentDS.data();
+            myParentKey = myData[0].__KEY;
+            bindParent(parentDS, myParentEntity, myData, myValidator, myForm, isEdit);
+            bindChildGrid(myParentEntity, myParentKey, myValidator);
+        } else//New Record
+        {
+            hideEditOnlyDiv();
+            //Have to create empty array as KendoUI dataSource's expect an array instead of single object
+            myData = [{}];
+            bindParent(parentDS, myParentEntity, myData, myValidator, myForm, isEdit);
+        }
+    }
+</script>

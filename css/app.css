@@ -1,0 +1,282 @@
+/* app css stylesheet */
+/* === Remove input autofocus webkit === */
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0px;
+}
+/* ===Header === */
+#header {
+    font-family: Papyrus, fantasy;
+    font-style: italic;
+    border: 1px solid #999999;
+    font-size: 25px;
+    height: 29px;
+}
+
+.headergradient {
+    background: #feffff; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjIxJSIgc3RvcC1jb2xvcj0iI2QyZWJmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU1JSIgc3RvcC1jb2xvcj0iI2QyZWJmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(left,  #feffff 0%, #d2ebf9 21%, #d2ebf9 55%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#feffff), color-stop(21%,#d2ebf9), color-stop(55%,#d2ebf9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #feffff 0%,#d2ebf9 21%,#d2ebf9 55%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #feffff 0%,#d2ebf9 21%,#d2ebf9 55%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #feffff 0%,#d2ebf9 21%,#d2ebf9 55%); /* IE10+ */
+    background: linear-gradient(to right,  #feffff 0%,#d2ebf9 21%,#d2ebf9 55%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 ); /* IE6-8 */
+}
+
+.required_notification {
+    color: #d45252;
+    display: inline;
+    float: right;
+}
+
+/* === Menu === */
+#dvmenu {
+    border: 1px solid #999999;
+}
+
+/* === LeftComponent === */
+#left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    padding: 2px;
+    overflow: auto;
+    border: 1px solid #999999;
+    background: #feffff; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjIzJSIgc3RvcC1jb2xvcj0iI2ZlZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjczJSIgc3RvcC1jb2xvcj0iI2QyZWJmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(45deg,  #feffff 23%, #d2ebf9 73%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(23%,#feffff), color-stop(73%,#d2ebf9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* IE10+ */
+    background: linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+#lefttopcmp {
+    position: relative;
+    border: 1px solid #999999;
+    background-color: white;
+    height: 29%;
+    width: 100%;
+}
+#leftbottomcmp {
+    position: relative;
+    border: 1px solid #999999;
+    background-color: white;
+    height: 70%;
+    width: 100%;
+}
+/* === Container -- wrapper for left and content views === */
+
+#container {
+    position: relative;
+    margin: 0 0 0 0;
+    height: 100%;
+}
+
+/* === Content Component === */
+#content {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 215px;
+    background: white;
+    padding: 8px;
+    min-height: 400px;
+    height: 100%;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 1px solid #999999;
+    background: #feffff; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjIzJSIgc3RvcC1jb2xvcj0iI2ZlZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjczJSIgc3RvcC1jb2xvcj0iI2QyZWJmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(45deg,  #feffff 23%, #d2ebf9 73%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(23%,#feffff), color-stop(73%,#d2ebf9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* IE10+ */
+    background: linear-gradient(45deg,  #feffff 23%,#d2ebf9 73%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+#contentview {
+    padding-bottom: 10px;
+}
+
+#contentview h2 {
+    margin: 0;
+    display: inline;
+    font-family: "Courier New", serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* === Form Elements === */
+
+#contentview form {
+    margin: 0;
+}
+
+#contentview fieldset {
+    margin-bottom: 2px;
+    margin-top: 3px;
+    padding: 4px;
+}
+
+#contentview fieldset p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#contentview fieldset legend {
+    background-color: none;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    position: relative;
+    font-size: 90%;
+    font: "Courier New";
+}
+
+#contentview label {
+    float: left;
+    text-align: left;
+    vertical-align: middle;
+    width: 125px;
+    font-size: 70%;
+}
+
+#contentview input:not[type='button']{
+width: 220px;
+vertical-align: middle;
+font-family: Arial, Helvetica, sans-serif;
+}
+#contentview .combobox {
+    width: 215px;
+}
+
+/* form element visual styles */
+#contentview  .required_notification {
+    font-size: 11px;
+}
+
+#contentview input[type='text'], #contentview textarea {
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius: 6px;
+}
+
+#contentview input[type='text']:focus, #contentview textarea:focus {
+    background: #FFF4C9;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #555;
+}
+
+#contentview input[type='text']:hover, #contentview textarea:hover {
+    background: #FFF4C9;
+    border: 1px solid #555;
+    box-shadow: 0 0 3px #555;
+}
+
+/* === HTML5 validation styles === */
+#contentview  input[type='text']:required, textarea:required {
+    background: #fff url(images/red_asterisk.png) no-repeat 98% center;
+}
+#contentview  input[type='text']:required:valid, textarea:required:valid {
+    background: #fff url(images/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+#contentview input[type='text']:focus:invalid, textarea:focus:invalid {
+    background: #FFF4C9 url(images/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+#contentview input[type='text']:hover:invalid, textarea:hover:invalid {
+    background: #FFF4C9 url(images/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535;
+}
+#contentview input[type='text']:required:hover:valid, textarea:required:hover:valid {
+    background: #FFF4C9 url(images/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+#contentview input[type='text']:required:focus:valid, textarea:required:focus:valid {
+    background: #FFF4C9 url(images/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+
+#KeyID {
+    margin: 0;
+    padding: 0;
+}
+
+.required:before {
+    content: "*";
+    color: red
+}
+
+.optional:after {
+    content: " (optional)";
+    color: #777;
+}
+
+/* === Footer === */
+#footer {
+    border: 1px solid #999999;
+    margin: 5px;
+    background-color: white;
+}
+#footer p {
+    margin: 5px;
+}
+
+/* === KendoUI Classes Overrides === */
+span.k-tooltip {
+    margin-left: 6px;
+}
+
+.k-menu .k-link {
+    padding: 0 0 0 0;
+    font-size: 16px;
+    font-family: 'Trebuchet MS';
+}
+
+/* === Other Classes === */
+.errorMessages {
+    display: none;
+    list-style-type: disc;
+    margin: 0 10px 15px 10px;
+    padding: 8px 35px 8px 30px;
+    color: #B94A48;
+    background-color: #F2DEDE;
+    border: 2px solid #EED3D7;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.errorMessages span {
+    font-weight: bold;
+}
+
+.searchlist {
+    width: 100%;
+}
+

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<meta name="description" content="" />
+		<meta name="author" content="dan" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<title>Simply Fundrasing</title>
+
+		<link rel="stylesheet" href="css/app.css" type="text/css" />
+		<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+
+		<link href="js/lib/kendoui/styles/kendo.common.min.css" rel="stylesheet" />
+		<link href="js/lib/kendoui/styles/kendo.default.min.css" rel="stylesheet" />
+
+		<script src="js/lib/jquery/jquery-1.8.3.js"></script>
+
+		<script src="js/lib/kendoui/kendo.web.js"></script>
+
+		<script src="js/lib/angular/angular.js"></script>
+		<script src="js/app/angular/app.js"></script>
+		<script src="js/app/angular/controllers.js"></script>
+		<script src="js/app/angular/services.js"></script>
+		<script src="js/app/angular/filters.js"></script>
+		<script src="js/app/angular/directives.js"></script>
+
+		<script src="js/app/model/schemas.js"></script>
+		<script src="js/app/model/datasources.js"></script>
+		<script src="js/app/model/entityRelationships.js"></script>
+	
+		<script src="js/app/scripts/bindviewmodelform.js"></script>
+		<script src="js/app/scripts/configureDataForWakandaDB.js"></script>
+		<script src="js/app/scripts/definedatasource.js"></script>
+		<script src="js/app/scripts/definedropdownlist.js"></script>
+		<script src="js/app/scripts/definegrid.js"></script>
+		<script src="js/app/scripts/definegridcolumns.js"></script>
+		<script src="js/app/scripts/definevalidation.js"></script>
+		<script src="js/app/scripts/defineviewmodel.js"></script>
+		<script src="js/app/scripts/formutils.js"></script>
+		
+		<!--[if gte IE 9]>
+		<style type="text/css">
+		.gradient {
+		filter: none;
+		}
+		</style>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<script>
+            $(document).ready(function() {
+                $("#menu").kendoMenu({
+                    hoverDelay : 200
+                });
+            });
+		</script>
+		<div id="header" class="headergradient">
+			Simply Fundraising
+		</div>
+		<div ng-controller="mainContainer" id="mainContainer">
+			<div id='dvmenu'>
+				<ul id="menu">
+					<li>
+						<a href="#/view1">Home</a>
+					</li>
+					<li>
+						<a href="#/view2?datatest">Campaigns</a>
+					</li>
+					<li>
+						Contacts
+						<ul>
+							<li>
+								<a href="#/ContactDetail?isNew=true">Contact Detail</a>
+							</li>
+							<li>
+								<a href="#/ContactList">Contact List</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#/view2?datatest">Contributions</a>
+					</li>
+					<li>
+						<a href="#/view2?datatest">Events</a>
+					</li>
+					<li>
+						<a href="#/view2?datatest">Reports</a>
+					</li>
+					<li>
+						<a href="#/view2?datatest">DashBorad</a>
+					</li>
+					<li>
+						<a href="#/view2?datatest">Pledges</a>
+					</li>
+					<li>
+						<a href="#/view2?datatest">Volunteers</a>
+					</li>
+					<li>
+						<a ng-click="leftTopComponent='views/partial3.html'">Sub Page 1</a>
+					</li>
+					<li>
+						<a ng-click="leftBottomComponent='views/partial4.html'">Sub Page 2</a>
+					</li>
+				</ul>
+			</div>
+			<div id='container'>
+				<div id='left'>
+					<div ng-include src="leftTopComponent" id="lefttopcmp"></div>
+					<div ng-include src="leftBottomComponent" id="leftbottomcmp"></div>
+				</div>
+				<div id='content'>
+					<div ng-view id="contentview"></div>
+				</div>
+			</div>
+			<div id='footer'>
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec eu
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
